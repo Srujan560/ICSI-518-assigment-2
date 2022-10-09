@@ -14,7 +14,7 @@ export default function UserInput() {
 
     
     const addUser = ()=>{
-        Axios.post("http://localhost:3001/create",{
+        Axios.post("https://heroku-icsi-518-assigem-2.herokuapp.com/create",{
             UserFirst:UserFirst,
             UserLast:UserLast,
             UserNumber:UserNumber, 
@@ -25,7 +25,7 @@ export default function UserInput() {
                 
     }
     useEffect(()=>{
-        Axios.get("http://localhost:3001/users").then((response)=> {
+        Axios.get("https://heroku-icsi-518-assigem-2.herokuapp.com/users").then((response)=> {
             setListofUsers(response.data)
         }
     )
